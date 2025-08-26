@@ -85,8 +85,8 @@ embeddings = AzureOpenAIEmbeddings(
 # Connect to Azure AI Search - Update with your financial documents index
 index_name = "rag-1754515975021"  # Update with your financial documents index name
 vector_store = AzureSearch(
-    azure_search_endpoint="https://ppl-test-aisearch1273293761837.search.windows.net",
-    azure_search_key="5bOYysO76GMmjuUVbEzcRqjnII7cq8uMiaiWWhWAYoAzSeBTwpTQ",
+    azure_search_endpoint="add search endpoint",
+    azure_search_key="add key",
     index_name=index_name,
     embedding_function=embeddings.embed_query
 )
@@ -484,4 +484,5 @@ async def debug_search(query: str, top_k: int = 5):
         }
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
